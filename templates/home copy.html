@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financeiro Pessoal</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+          <h1>Meu Site</h1>
+          <div class="navbar-buttons">
+              <button id="loginBtn">Login</button>
+              <button id="registerBtn">Registro</button>
+              <label class="switch">
+                  <input type="checkbox" id="themeToggle">
+                  <span class="slider"></span>
+              </label>
+          </div>
+      </div>
+  </nav>
+
+  <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+          <li>
+              <a href="#" class="menu-toggle">Item 1</a>
+              <ul class="submenu">
+                  <li><a href="#">Subitem 1.1</a></li>
+                  <li><a href="#">Subitem 1.2</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#" class="menu-toggle">Item 2</a>
+              <ul class="submenu">
+                  <li><a href="#">Subitem 2.1</a></li>
+                  <li><a href="#">Subitem 2.2</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+      </ul>
+  </aside>
+
+  <main class="main-content">
+      <h2>Bem-vindo ao meu site!</h2>
+      <p>Aqui você pode fazer login ou se registrar aqui.</p>
+  </main>
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  {% load static %}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.84.0" />
+    <title>Login Finanças pessoais</title>
+    {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+
+    <style>
+      .codes {
+        width: 300px;
+        margin-left: 400px;
+        padding: 40px;
+      }
+    </style>
+  </head>
+  <body class="text-center">
+    <div class="container">
+      <div class="codes">
+        <form class="form-horizontal form" name="LoginForm" method="post">
+          <img
+            class="mb-4"
+            src="{% static 'assets/images/logo.jpg' %}"
+            alt=""
+            width="150"
+            height="150"
+          />
+          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+          {% csrf_token %} {% if next %}
+          <input type="hidden" name="next" value="{{ next }}" />
+          {% endif %}
+          <div class="control-group">
+            <label class="control-label" for="username">Username</label>
+            <div class="controls">
+              <input
+                class="form-control"
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username"
+              />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+              <input
+                class="form-control"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="control-group">
+            <div class="controls">
+              <button type="submit" class="btn btn-success">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

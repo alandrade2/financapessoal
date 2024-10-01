@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout com Menu Lateral e Submenus</title>
+    <link rel="stylesheet" href="{% static 'css/principal.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="headertitle">
+        <img
+          class="bi me-2"
+          src="{% static 'assets/images/logodin.png' %}"
+          alt="Logo"
+          width="60"
+          height="60"
+        />
+        <h1>Finanças Pessoais</h1>
+      </div>
+      <div class="navbar-buttons">
+        <button id="loginBtn">Login</button>
+        <button id="registerBtn">Registro</button>
+        <label class="switch">
+          <input type="checkbox" id="themeToggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <nav>
+      <!-- <h2>Menu Lateral</h2> -->
+      <ul>
+        <li>
+          <button
+            class="menu-button"
+            onclick="toggleSubmenu(event, 'submenu1')"
+          >
+            Home <span class="icon" id="icon1">▼</span>
+          </button>
+          <ul id="submenu1" class="submenu">
+            <li><button class="submenu-button">Submenu 1.1</button></li>
+            <li><button class="submenu-button">Submenu 1.2</button></li>
+          </ul>
+        </li>
+        <li>
+          <button
+            class="menu-button"
+            onclick="toggleSubmenu(event, 'submenu2')"
+          >
+            Sobre <span class="icon" id="icon2">▼</span>
+          </button>
+          <ul id="submenu2" class="submenu">
+            <li><button class="submenu-button">Submenu 2.1</button></li>
+            <li><button class="submenu-button">Submenu 2.2</button></li>
+          </ul>
+        </li>
+        <li>
+          <button
+            class="menu-button"
+            onclick="toggleSubmenu(event, 'submenu3')"
+          >
+            Serviços <span class="icon" id="icon3">▼</span>
+          </button>
+          <ul id="submenu3" class="submenu">
+            <li><button class="submenu-button">Submenu 3.1</button></li>
+            <li><button class="submenu-button">Submenu 3.2</button></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div>
+        <h2>Conteúdo Principal</h2>
+      </div>
+      <div class="content-box">
+        <div class="product-list">
+          <div class="product-item" onclick="toggleDetails(event, 'details1')">
+            <div class="product-info">
+              <h2 class="product-name"><a href="">Produto 1</a></h2>
+              <div class="product-price">R$ 199,99</div>
+            </div>
+            <p class="product-description" id="details1">
+              Descrição breve do Produto 1.
+            </p>
+            <p class="product-category" id="category1">
+              Categoria: Eletrônicos
+            </p>
+            <p class="product-category" id="category1">Banco: XXPT</p>
+          </div>
+
+          <div class="product-item" onclick="toggleDetails(event, 'details2')">
+            <div class="product-info">
+              <h2 class="product-name">Produto 2</h2>
+              <div class="product-price">R$ 349,90</div>
+            </div>
+            <p class="product-description" id="details2">
+              Descrição breve do Produto 2.
+            </p>
+            <p class="product-category" id="category2">Categoria: Móveis</p>
+          </div>
+
+          <div class="product-item" onclick="toggleDetails(event, 'details3')">
+            <div class="product-info">
+              <h2 class="product-name">Produto 3</h2>
+              <div class="product-price">R$ 89,99</div>
+            </div>
+            <p class="product-description" id="details3">
+              Descrição breve do Produto 3.
+            </p>
+            <p class="product-category" id="category3">Categoria: Roupas</p>
+          </div>
+
+          <div class="product-item" onclick="toggleDetails(event, 'details4')">
+            <div class="product-info">
+              <h2 class="product-name">Produto 4</h2>
+              <div class="product-price">R$ 59,90</div>
+            </div>
+            <p class="product-description" id="details4">
+              Descrição breve do Produto 4.
+            </p>
+            <p class="product-category" id="category4">Categoria: Acessórios</p>
+          </div>
+          <div class="product-item" onclick="toggleDetails(event, 'details5')">
+            <div class="product-info">
+              <h2 class="product-name">Produto 5</h2>
+              <div class="product-price">R$ 59,90</div>
+            </div>
+            <p class="product-description" id="details5">
+              Descrição breve do Produto 4.
+            </p>
+            <p class="product-category" id="category5">Categoria: Acessórios</p>
+          </div>
+          <div class="product-item" onclick="toggleDetails(event, 'details6')">
+            <div class="product-info">
+              <h2 class="product-name">Produto 6</h2>
+              <div class="product-price">R$ 59,90</div>
+            </div>
+            <p class="product-description" id="details6">
+              Descrição breve do Produto 4.
+            </p>
+            <p class="product-category" id="category6">Categoria: Acessórios</p>
+          </div>
+          <div class="product-item" onclick="toggleDetails(event, 'details7')">
+            <div class="product-info">
+              <h2 class="product-name">Produto 7</h2>
+              <div class="product-price">R$ 59,90</div>
+            </div>
+            <p class="product-description" id="details7">
+              Descrição breve do Produto 4.
+            </p>
+            <p class="product-category" id="category7">Categoria: Acessórios</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

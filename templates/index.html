@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financeiro Pessoal</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Financeiro Pessoal</h1>
+      <div class="navbar-buttons">
+        <button id="loginBtn">Login</button>
+        <button id="registerBtn">Admin</button>
+        <label class="switch">
+          <input type="checkbox" id="themeToggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sidebar">
+      <div class="main-content">
+        <h2>Conteúdo Principal</h2>
+      </div>
+    </div>
+    
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

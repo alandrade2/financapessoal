@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+header {
+  background: #333;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1000;
+  display: flex;
+  /* width: 100%; */
+  padding: 10px 20px;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+
+nav {
+  background: #444;
+  color: white;
+  position: fixed;
+  top: 60px; /* Abaixo do header */
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  margin: 10px 0;
+}
+
+.submenu {
+  display: none; /* Oculta os submenus por padrão */
+  padding-left: 10px; /* Indenta o submenu */
+}
+
+.submenu li {
+  margin: 5px 0;
+}
+
+.submenu-button {
+  background: #666;
+  padding: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+}
+.icon {
+  position: absolute;
+  right: 10px;
+}
+
+.menu-button {
+  background: #555;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+}
+main {
+  margin-left: 210px; /* Espaço para o menu lateral */
+  margin-top: 60px; /* Espaço para o header */
+  padding: 20px;
+}
+.content-box {
+  padding: 10px;
+  height: calc(100vh - 190px); /* Altura total menos o header e o menu */
+  overflow-y: auto; Scroll se necessário
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+}
+.headertitle {
+  display: flex;
+}
+.headertitle img {
+  background-color: rgba(255, 255, 255, 0.2);
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.navbar-buttons button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.main-content {
+  margin-left: 220px; /* Largura da sidebar + algum espaçamento */
+  padding: 80px 20px 20px; /* Espaçamento para o navbar */
+  flex-grow: 1;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Lista de informações */
+
+.product-list {
+  max-width: 800px;
+  margin: auto;
+  color: #666;
+  padding: 20px;
+  /* background: white; */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product-item {
+  border-left: 4px solid green; /* Linha fina verde à esquerda */
+  margin-bottom: 15px;
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  padding: 15px;
+  transition: background 0.3s;
+}
+.product-item:hover {
+  background: rgba(255, 255, 255, 0.2); /* Destaque ao passar o mouse */
+}
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-name {
+  font-size: 1.5em;
+  margin: 0;
+}
+.product-description, .product-category {
+  font-size: 0.9em;
+  color: #666;
+  margin: 5px 0;
+  display: none; /* Oculta as informações adicionais por padrão */
+}
+.product-price {
+  font-size: 1.2em;
+  color: green; /* Cor do preço */
+}
+
+a{ 
+  text-decoration: none;
+  color: #666;
+}
